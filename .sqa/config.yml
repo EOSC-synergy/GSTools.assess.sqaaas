@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/GeoStat-Framework/GSTools:
+      branch: main
+      repo: https://github.com/GeoStat-Framework/GSTools
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/GeoStat-Framework/GSTools git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-thistle-caracal.sh
+        container: qc.acc_gloppy-cobalt-cat
+  QC.Doc:
+    repos:
+      github.com/GeoStat-Framework/GSTools find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-dandelion-uakari.sh
+        container: qc.doc_trippy-taupe-spaniel
+      github.com/GeoStat-Framework/GSTools git:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-brown-beagle.sh
+        container: qc.doc_stuffy-grey-hedgehog
+      github.com/GeoStat-Framework/GSTools markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-auburn-otter.sh
+        container: qc.doc_gloppy-amethyst-mammoth
+      github.com/GeoStat-Framework/GSTools restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-eggplant-quetzal.sh
+        container: qc.doc_hilly-firebrick-sparrow
+  QC.Lic:
+    repos:
+      github.com/GeoStat-Framework/GSTools licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-charcoal-weasel.sh
+        container: qc.lic_tasty-azure-spitz
+  QC.Sec:
+    repos:
+      github.com/GeoStat-Framework/GSTools bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-white-zonkey.sh
+        container: qc.sec_stinky-lime-emu
+  QC.Sty:
+    repos:
+      github.com/GeoStat-Framework/GSTools flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-lavender-dragonfly.sh
+        container: qc.sty_snazzy-bronze-hound
+      github.com/GeoStat-Framework/GSTools jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-tomato-heron.sh
+        container: qc.sty_skinny-buff-bullfrog
+  QC.Uni:
+    repos:
+      github.com/GeoStat-Framework/GSTools pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-violet-flounder.sh
+        container: qc.uni_woozy-tan-gerbil
+  QC.Ver:
+    repos:
+      github.com/GeoStat-Framework/GSTools get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-bronze-spitz.sh
+        container: qc.ver_goopy-alizarin-dugong
+timeout: 5400

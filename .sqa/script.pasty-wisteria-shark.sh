@@ -5,5 +5,5 @@
 
 (
 cd github.com/GeoStat-Framework/GSTools &&
-    mdl --json .
+    git rev-parse --is-inside-work-tree 
 )

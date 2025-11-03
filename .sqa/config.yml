@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/GeoStat-Framework/GSTools:
       branch: main
@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/GeoStat-Framework/GSTools git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-thistle-caracal.sh
-        container: qc.acc_gloppy-cobalt-cat
+        - /usr/bin/env sh .sqa/script.trippy-plum-indri.sh
+        container: qc.acc_queasy-scarlet-uakari
   QC.Doc:
     repos:
       github.com/GeoStat-Framework/GSTools find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-dandelion-uakari.sh
-        container: qc.doc_trippy-taupe-spaniel
+        - /usr/bin/env sh .sqa/script.grumpy-teal-mongoose.sh
+        container: qc.doc_cloudy-sangria-caracal
       github.com/GeoStat-Framework/GSTools git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-brown-beagle.sh
-        container: qc.doc_stuffy-grey-hedgehog
+        - /usr/bin/env sh .sqa/script.pasty-wisteria-shark.sh
+        container: qc.doc_stinky-ochre-lemming
       github.com/GeoStat-Framework/GSTools markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-auburn-otter.sh
-        container: qc.doc_gloppy-amethyst-mammoth
+        - /usr/bin/env sh .sqa/script.pasty-xanthic-okapi.sh
+        container: qc.doc_hilly-olive-jaguar
       github.com/GeoStat-Framework/GSTools restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-eggplant-quetzal.sh
-        container: qc.doc_hilly-firebrick-sparrow
+        - /usr/bin/env sh .sqa/script.skinny-emerald-shark.sh
+        container: qc.doc_leaky-burgundy-budgerigar
   QC.Lic:
     repos:
       github.com/GeoStat-Framework/GSTools licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-charcoal-weasel.sh
-        container: qc.lic_tasty-azure-spitz
+        - /usr/bin/env sh .sqa/script.snazzy-khaki-starfish.sh
+        container: qc.lic_stinky-cinnabar-dingo
   QC.Sec:
     repos:
       github.com/GeoStat-Framework/GSTools bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-white-zonkey.sh
-        container: qc.sec_stinky-lime-emu
+        - /usr/bin/env sh .sqa/script.cheeky-chestnut-cockroach.sh
+        container: qc.sec_snappy-teal-ferret
   QC.Sty:
     repos:
       github.com/GeoStat-Framework/GSTools flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-lavender-dragonfly.sh
-        container: qc.sty_snazzy-bronze-hound
+        - /usr/bin/env sh .sqa/script.trippy-dandelion-crab.sh
+        container: qc.sty_nerdy-mustard-kangaroo
       github.com/GeoStat-Framework/GSTools jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-tomato-heron.sh
-        container: qc.sty_skinny-buff-bullfrog
+        - /usr/bin/env sh .sqa/script.messy-puce-chamois.sh
+        container: qc.sty_baggy-plum-whale
   QC.Uni:
     repos:
       github.com/GeoStat-Framework/GSTools pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-violet-flounder.sh
-        container: qc.uni_woozy-tan-gerbil
+        - /usr/bin/env sh .sqa/script.craggy-ruby-falcon.sh
+        container: qc.uni_gummy-teal-dalmatian
   QC.Ver:
     repos:
       github.com/GeoStat-Framework/GSTools get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-bronze-spitz.sh
-        container: qc.ver_goopy-alizarin-dugong
+        - /usr/bin/env sh .sqa/script.flimsy-apricot-swan.sh
+        container: qc.ver_skimpy-chocolate-moorhen
 timeout: 5400

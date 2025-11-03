@@ -5,5 +5,5 @@
 
 (
 cd github.com/GeoStat-Framework/GSTools &&
-    git rev-parse --is-inside-work-tree
+    git rev-parse --is-inside-work-tree 
 )

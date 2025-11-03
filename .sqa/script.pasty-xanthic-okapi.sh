@@ -5,5 +5,5 @@
 
 (
 cd github.com/GeoStat-Framework/GSTools &&
-    licensee detect . --confidence 60 --json
+    mdl --json  .
 )
